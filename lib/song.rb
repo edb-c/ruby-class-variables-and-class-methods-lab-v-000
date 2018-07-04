@@ -1,15 +1,15 @@
 class Song
 
-  attr_accessor :song_name,:artist,:genre
-  @@song_count = 0
+  attr_accessor :name,:artist,:genre
+  @@count = 0
   #@@songs = []
   @@genres = []
   @@artists = []
   
   def initialize(input_name,artist,genre)
 
-    @@song_count += 1
-    @song_name = input_name
+    @@count += 1
+    @name = input_name
     @genre = genre
     @artist = artist
     #@@songs << input_name
@@ -19,8 +19,8 @@ class Song
   
   end
 
-  def self.song_count 
-    @@song_count
+  def self.count 
+    @@count
   end
   
   #def self.songs
@@ -53,7 +53,7 @@ end
 Song.new("Lucifer", "Jay-Z", "rap" )
 Song.new("99 Problems", "Jay-Z", "rap")
 Song.new("hit me baby one more time", "Brittany Spears", "pop")
-Song.song_count
+Song.count
 #Song.songs
 Song.artists
 Song.genres
