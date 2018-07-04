@@ -2,7 +2,7 @@ class Song
 
   attr_accessor :song_name,:artist,:genre
   @@song_count = 0
-  @@songs = []
+  #@@songs = []
   @@genres = []
   @@artists = []
   
@@ -12,7 +12,7 @@ class Song
     @song_name = input_name
     @genre = genre
     @artist = artist
-    @@songs << input_name
+    #@@songs << input_name
     @@genres << genre
     @@artists << artist
     
@@ -23,9 +23,9 @@ class Song
     @@song_count
   end
   
-  def self.songs
-    @@songs.uniq
-  end
+  #def self.songs
+  #  @@songs.uniq
+  #end
   
   def self.artists
     @@artists.uniq
@@ -54,7 +54,7 @@ Song.new("Lucifer", "Jay-Z", "rap" )
 Song.new("99 Problems", "Jay-Z", "rap")
 Song.new("hit me baby one more time", "Brittany Spears", "pop")
 Song.song_count
-Song.songs
+#Song.songs
 Song.artists
 Song.genres
 
